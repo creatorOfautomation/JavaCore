@@ -8,7 +8,7 @@ public class Task4 {
         String lastPart = target.substring(target.lastIndexOf(' '));
         String firstPart = target.substring(0, target.indexOf(' '));
         String middle = (target.substring(target.indexOf(' '), target.lastIndexOf(' '))).trim();
-        System.out.println(lastPart + " "+ middle + " " + firstPart);
+        System.out.println(lastPart + " " + middle + " " + firstPart);
 
     }
 }
