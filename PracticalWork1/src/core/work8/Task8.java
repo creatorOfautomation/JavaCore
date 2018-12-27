@@ -1,4 +1,4 @@
-package com.java.core.work8;
+package core.work8;
 
 import java.math.BigDecimal;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package com.java.core.work5;
+package core.work5;
 
 public class Task5 {
 

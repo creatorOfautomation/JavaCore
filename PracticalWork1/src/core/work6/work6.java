@@ -1,4 +1,4 @@
-package com.java.core.work6;
+package core.work6;
 
 import java.util.Scanner;
 

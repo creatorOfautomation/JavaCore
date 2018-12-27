@@ -1,4 +1,4 @@
-package com.java.core.work9;
+package core.work9;
 
 import java.util.Arrays;
 
@@ -50,7 +50,7 @@ public class Task9 {
         int row = 0;
         while (row != matrix.length) {
             for (int i = 0; i < matrix.length; i++) {
-                System.out.print(matrix[row][i] + " ");
+                System.out.printf("%4d", matrix[row][i] );
             }
             System.out.println();
             row++;
@@ -74,7 +74,7 @@ public class Task9 {
     }
 
     public static void main(String[] args) {
-        int[][] matrix = createMatrix(4);
+        int[][] matrix = createMatrix(14);
         getMinElementInMatrix(matrix);
 
         printMatrix(matrix);

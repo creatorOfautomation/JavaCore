@@ -1,4 +1,4 @@
-package com.java.core.work10;
+package core.work10;
 
 import java.util.Scanner;
 
@@ -16,13 +16,13 @@ public class Task10 {
     public static boolean countBrackets(String str) {
 
         int br1 = 0;
-        int br2 = 0;
         for (int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i);
-            if (ch == '(') br1 += 1;
-            else if (ch == ')') br2 += 1;
+            if (ch == '(') br1 ++ ;
+            else if (ch == ')') br1 --;
+            if (br1<0) return false;
         }
-        if (br1 == br2) return true;
+        if (br1 == 0) return true;
         return false;
     }
 

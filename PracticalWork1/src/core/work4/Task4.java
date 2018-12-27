@@ -1,4 +1,4 @@
-package com.java.core.work4;
+package core.work4;
 
 public class Task4 {
 
