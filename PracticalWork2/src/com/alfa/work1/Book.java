@@ -10,6 +10,29 @@ public class Book {
     private int pages;
     private double cost;
 
+    public Book(int id, String title, String author, String publisher, int year, int pages, double cost) {
+        this.Id = id;
+        this.title = title;
+        this.author = author;
+        this.publisher = publisher;
+        this.year = year;
+        this.pages = pages;
+        this.cost = cost;
+    }
+
+    public Book(int id, String title, String author, String publisher, int year, double cost) {
+
+        this(id, title, author, publisher, year, 0, cost);
+    }
+
+    public Book(int id, String title, String author, String publisher, double cost) {
+
+        this(id, title, author, publisher, 0, cost);
+    }
+
+    public Book() {
+    }
+
     public int getId() {
         return Id;
     }
@@ -66,9 +89,10 @@ public class Book {
         this.cost = cost;
     }
 
-    @Override
-    public String toString() {
-        return "Book{" +
+
+    public void view() {
+
+        System.out.println("Book{" +
                 "Id=" + Id +
                 ", title='" + title + '\'' +
                 ", author='" + author + '\'' +
@@ -76,6 +100,6 @@ public class Book {
                 ", year=" + year +
                 ", pages=" + pages +
                 ", cost=" + cost +
-                '}';
+                '}');
     }
 }

@@ -1,6 +1,7 @@
 package core;
 
-import com.java.core.work1.Task1;
+
+import core.work1.Task1;
 
 import java.util.Arrays;
 
