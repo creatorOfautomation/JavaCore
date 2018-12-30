@@ -1,4 +1,4 @@
-import com.alfa.Runner;
+import com.alfa.work1.Runner;
 
 public class Main {
 
