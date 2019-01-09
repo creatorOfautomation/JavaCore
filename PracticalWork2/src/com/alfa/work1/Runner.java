@@ -15,11 +15,12 @@ public class Runner {
         printBook(books);
         increaseCost(books, 10);
         printBook(books);
-        searchBookByAuthor(books, "Author1");
-        searchBookByPublisher(books, "publisher1");
-        searchBookByYear(books, 1993);
-        searchBookByPublisher(books, "KJSDFHKS<HBDF");
-        searchBookByAuthor(books, "KJSDFHKS<HBDF");
+        Book[] books1 = searchBookByAuthor(books, "Author111");
+        printBook(books1);
+        printBook(searchBookByPublisher(books, "publisher1"));
+        printBook(searchBookByYear(books, 1993));
+        printBook(searchBookByPublisher(books, "KJSDFHKS<HBDF"));
+
     }
 
     public Book[] createBooks(int amount) {
@@ -50,9 +51,11 @@ public class Runner {
 
     public void printBook(Book[] books) {
 
-        for (Book b :
-                books) {
-            b.view();
+        if (books.length > 0) {
+            for (Book b :
+                    books) {
+                b.view();
+            }
         }
     }
 
@@ -75,7 +78,7 @@ public class Runner {
         }
     }
 
-    public void searchBookByAuthor(Book[] books, String author) {
+    public Book[] searchBookByAuthor(Book[] books, String author) {
 
         ArrayList<Book> foundBooks = new ArrayList<>();
         for (Book b : books) {
@@ -83,15 +86,15 @@ public class Runner {
                 foundBooks.add(b);
             }
         }
-        if (!foundBooks.isEmpty()) {
+        if (!foundBooks.isEmpty())
             System.out.printf("Found next %d books by your query '%s':%n ", foundBooks.size(), author);
-            for (Book b : foundBooks) {
-                b.view();
-            }
-        } else System.out.printf("There are no one book by your query '%s'", author);
+        else
+            System.out.printf("There are no one book by your query '%s' %n", author);
+        return foundBooks.toArray(new Book[0]);
+
     }
 
-    public void searchBookByPublisher(Book[] books, String publisher) {
+    public Book[] searchBookByPublisher(Book[] books, String publisher) {
 
         ArrayList<Book> foundBooks = new ArrayList<>();
         for (Book b : books) {
@@ -99,15 +102,15 @@ public class Runner {
                 foundBooks.add(b);
             }
         }
-        if (!foundBooks.isEmpty()) {
+        if (!foundBooks.isEmpty())
             System.out.printf("Found next %d books by your query '%s':%n ", foundBooks.size(), publisher);
-            for (Book b : foundBooks) {
-                b.view();
-            }
-        } else System.out.printf("There are no one book by your query '%s'", publisher);
+        else
+            System.out.printf("There are no one book by your query '%s' %n ", publisher);
+        return foundBooks.toArray(new Book[0]);
+
     }
 
-    public void searchBookByYear(Book[] books, int year) {
+    public Book[] searchBookByYear(Book[] books, int year) {
 
         ArrayList<Book> foundBooks = new ArrayList<>();
         for (Book b : books) {
@@ -115,12 +118,11 @@ public class Runner {
                 foundBooks.add(b);
             }
         }
-        if (!foundBooks.isEmpty()) {
+        if (!foundBooks.isEmpty())
             System.out.printf("Found next %d books by your query - published later than %d: %n", foundBooks.size(), year);
-            for (Book b : foundBooks) {
-                b.view();
-            }
-        } else System.out.printf("There are no one book by your query - published later than %d", year);
+        else
+            System.out.printf("There are no one book by your query - published later than %d %n ", year);
+        return foundBooks.toArray(new Book[0]);
     }
 
     public static void main(String[] args) {
