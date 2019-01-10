@@ -10,11 +10,10 @@ public class MyCalculate {
             znamennyk += 2;
             result = (i % 2 == 0) ? (result + (4 / znamennyk)) : (result - (4 / znamennyk));
         }
-
         return result;
     }
 
     public static void main(String[] args) {
-        System.out.println(calcPi(1000000));
+        System.out.println(calcPi(1000000000));
     }
 }
