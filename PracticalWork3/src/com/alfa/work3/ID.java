@@ -9,14 +9,16 @@ public class ID {
 
     static {
         nextId= ((int) (Math.random() * 100));
-        nextId++;
+
     }
     public int getId() {
         return id;
     }
 
     {
+        nextId++;
         id = nextId;
+
     }
 
     public ID() {
