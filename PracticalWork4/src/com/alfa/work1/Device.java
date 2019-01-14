@@ -44,10 +44,9 @@ public class Device {
 
     @Override
     public String toString() {
-        return "Device{" +
-                "serialNumber='" + serialNumber + '\'' +
-                ", manufacture='" + manufacture + '\'' +
-                ", price=" + price +
-                '}';
+        return "class " + this.getClass().getSimpleName() +
+                ", serialNumber=" + serialNumber +
+                ", manufacture=" + manufacture +
+                ", price=" + price;
     }
 }
