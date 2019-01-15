@@ -34,4 +34,26 @@ public class Monitor extends Device {
                 ", X=" + resolutionX +
                 ", Y=" + resolutionY;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        //if (obj == null || this.getClass() != obj.getClass()) return false;
+        if (!super.equals(obj)) return false;
+        Monitor that = (Monitor) obj;
+        return (this.resolutionX == that.resolutionX
+                && this.resolutionY == that.resolutionY);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return 31 * 5 + resolutionY + resolutionX + super.hashCode();
+    }
+
+    public static void main(String[] args) {
+        Monitor monitor = new Monitor("123", "manufac1", 5654.0, 87, 89);
+        Monitor monitor1 = new Monitor("123", "manufac1", 5654.0, 87, 89);
+        System.out.println(monitor.equals(monitor1));
+    }
 }

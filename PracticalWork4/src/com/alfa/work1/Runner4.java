@@ -1,6 +1,6 @@
 package com.alfa.work1;
 
-public class Runner {
+public class Runner4 {
 
     public void run() {
         Device[] devices = new Device[3];

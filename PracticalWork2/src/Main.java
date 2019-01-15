@@ -1,8 +1,8 @@
-import com.alfa.work1.Runner;
+import com.alfa.work1.Runner1;
 
 public class Main {
 
     public static void main(String[] args) {
-        new Runner().run();
+        new Runner1().run();
     }
 }

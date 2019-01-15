@@ -2,7 +2,7 @@ package com.alfa.work1;
 
 import java.util.ArrayList;
 
-public class Runner {
+public class Runner1 {
 
 
     public void run() {
@@ -127,7 +127,7 @@ public class Runner {
 
     public static void main(String[] args) {
 
-        Runner ra = new Runner();
+        Runner1 ra = new Runner1();
 
         Book[] books = ra.createBooks(4);
 
