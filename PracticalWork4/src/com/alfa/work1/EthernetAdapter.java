@@ -1,7 +1,5 @@
 package com.alfa.work1;
 
-import java.util.Objects;
-
 public class EthernetAdapter extends Device {
 
     private int speed;
@@ -54,12 +52,4 @@ public class EthernetAdapter extends Device {
         return result + super.hashCode();
     }
 
-    public static void main(String[] args) {
-
-        EthernetAdapter ad = new EthernetAdapter("123312", "Manuf3", 65465.0, 6565, "Maac1");
-        EthernetAdapter ad1 = new EthernetAdapter("123312", "Manuf3", 65465.0, 6565, "Maac1");
-
-        System.out.println(ad.hashCode());
-        System.out.println(ad1.hashCode());
-    }
 }

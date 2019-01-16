@@ -9,7 +9,6 @@ public class Monitor extends Device {
         super(serialNumber, manufacture, price);
         this.resolutionX = resolutionX;
         this.resolutionY = resolutionY;
-
     }
 
     public int getResolutionX() {
@@ -51,9 +50,4 @@ public class Monitor extends Device {
         return 31 * 5 + resolutionY + resolutionX + super.hashCode();
     }
 
-    public static void main(String[] args) {
-        Monitor monitor = new Monitor("123", "manufac1", 5654.0, 87, 89);
-        Monitor monitor1 = new Monitor("123", "manufac1", 5654.0, 87, 89);
-        System.out.println(monitor.equals(monitor1));
-    }
 }

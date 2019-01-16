@@ -69,26 +69,4 @@ public class Device {
         return res;
     }
 
-    public static void main(String[] args) {
-        Device device = new Device("String1", "String", 1.0);
-        Device device1 = new Device("String", "String", 1.0);
-        System.out.println(device.equals(device1));
-    }
-    //        return Objects.hash(serialNumber, manufacture, price);
-    //
-    //    public int hashCode() {
-    //    @Override
-    //
-    //    }
-    //                Objects.equals(manufacture, device.manufacture);
-    //                Objects.equals(serialNumber, device.serialNumber) &&
-    //        return Double.compare(device.price, price) == 0 &&
-    //        Device device = (Device) o;
-    //        if (o == null || getClass() != o.getClass()) return false;
-    //        if (this == o) return true;
-    //    public boolean equals(Object o) {
-//    @Override
-
-//    }
-
 }
