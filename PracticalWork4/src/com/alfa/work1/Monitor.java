@@ -38,6 +38,7 @@ public class Monitor extends Device {
     public boolean equals(Object obj) {
         if (this == obj) return true;
         //if (obj == null || this.getClass() != obj.getClass()) return false;
+        if (!(obj instanceof Monitor)) return false;
         if (!super.equals(obj)) return false;
         Monitor that = (Monitor) obj;
         return (this.resolutionX == that.resolutionX

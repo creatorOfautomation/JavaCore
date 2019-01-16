@@ -1,13 +1,13 @@
 package com.alfa;
 
 
-import com.alfa.work1.Runner4;
+import com.alfa.work2.Runner;
 
 public class Task1 {
 
 
     public static void main(String[] args) {
-        Runner4 runner = new Runner4();
+        Runner runner = new Runner();
         runner.run();
     }
 }

@@ -1,6 +1,7 @@
 package com.alfa.work1;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Runner1 {
 
@@ -80,6 +81,29 @@ public class Runner1 {
 
     public Book[] searchBookByAuthor(Book[] books, String author) {
 
+
+        Book[] newBooks = new Book[books.length];
+        int counter = 0;
+
+        for (Book b : books) {
+
+            if (b.getAuthor().equalsIgnoreCase(author)) {
+                newBooks[counter] = b;
+                counter++;
+            }
+        }
+
+        if (books.length > 0) {
+
+            Book[] foundBooks = Arrays.copyOf(newBooks, newBooks.length);
+            System.out.printf("Found next %d books by your query '%s':%n ", foundBooks.length, author);
+            return foundBooks;
+        } else {
+            System.out.printf("There are no one book by your query '%s' %n", author);
+            return new Book[0];
+        }
+        /*
+
         ArrayList<Book> foundBooks = new ArrayList<>();
         for (Book b : books) {
             if (author.equalsIgnoreCase(b.getAuthor())) {
@@ -90,7 +114,7 @@ public class Runner1 {
             System.out.printf("Found next %d books by your query '%s':%n ", foundBooks.size(), author);
         else
             System.out.printf("There are no one book by your query '%s' %n", author);
-        return foundBooks.toArray(new Book[0]);
+        return foundBooks.toArray(new Book[0]);*/
 
     }
 
@@ -111,6 +135,7 @@ public class Runner1 {
     }
 
     public Book[] searchBookByYear(Book[] books, int year) {
+
 
         ArrayList<Book> foundBooks = new ArrayList<>();
         for (Book b : books) {

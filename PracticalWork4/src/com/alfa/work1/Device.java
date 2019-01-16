@@ -54,6 +54,7 @@ public class Device {
 
         if (this == obj) return true;
         if (obj == null || this.getClass() != obj.getClass()) return false;
+        if (!(obj instanceof Device)) return false;
         Device o = (Device) obj;
         return (this.price == o.price
                 && this.manufacture.equals(o.manufacture)

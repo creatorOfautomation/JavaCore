@@ -37,6 +37,7 @@ public class EthernetAdapter extends Device {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
+        if (!(o instanceof EthernetAdapter))return false;
         if (!super.equals(o)) return false;
         EthernetAdapter that = (EthernetAdapter) o;
         return speed == that.speed
