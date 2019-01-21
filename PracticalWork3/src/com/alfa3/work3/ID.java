@@ -1,4 +1,4 @@
-package com.alfa.work3;
+package com.alfa3.work3;
 
 import java.util.Random;
 

@@ -1,6 +1,6 @@
-package com.alfa;
+package com.alfa3;
 
-import com.alfa.work3.Runner;
+import com.alfa3.work3.Runner;
 
 public class Task3 {
 

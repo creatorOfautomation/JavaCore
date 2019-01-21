@@ -8,9 +8,9 @@ public class Train {
 
     private int number;
     private String stationDispatch;
+    private String stationArrival;
     private String timeDispatch;
     private String timeArrival;
-    private String stationArrival;
     private DaysOfWeek[] daysOfWeek;
 
     private static int num = 1;
@@ -73,9 +73,11 @@ public class Train {
         return this.getClass().getSimpleName() +
                 " number=" + number +
                 ", stationDispatch='" + stationDispatch + '\'' +
+                ", stationArrival='" + stationArrival + '\'' +
                 ", timeDispatch='" + timeDispatch + '\'' +
                 ", timeArrival='" + timeArrival + '\'' +
-                ", stationArrival='" + stationArrival + '\'' +
                 ", daysOfWeek=" + Arrays.toString(daysOfWeek);
     }
 }
+
+

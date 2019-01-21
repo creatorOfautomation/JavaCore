@@ -1,6 +1,6 @@
-package com.alfa.work4;
+package com.alfa3.work4;
 
-import com.alfa.work4.calcarea.Calculate;
+import com.alfa3.work4.calcarea.Calculate;
 
 public class Runner {
 

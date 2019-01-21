@@ -8,11 +8,13 @@ public class Runner {
 
         int position = 0;
 
-        for (Suit suit : Suit.values()) {
-            for (Runk runk : Runk.values()) {
-                cards[position] = new Card(suit, runk);
+        for (Runk r : Runk.values()) {
+            for (Suit s :
+                    Suit.values()) {
+                cards[position] = new Card(s, r);
                 position++;
             }
+
         }
 
         for (Card c :

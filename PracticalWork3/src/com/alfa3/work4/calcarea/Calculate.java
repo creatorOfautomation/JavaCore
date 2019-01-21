@@ -1,6 +1,5 @@
-package com.alfa.work4.calcarea;
+package com.alfa3.work4.calcarea;
 
-import com.alfa.work4.calcarea.Calculate;
 public class Calculate {
 
     public static double areaCircle(double radius) {

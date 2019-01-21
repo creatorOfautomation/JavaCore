@@ -1,4 +1,4 @@
-package com.alfa.work1;
+package com.alfa3.work1;
 
 public class Runner {
 
