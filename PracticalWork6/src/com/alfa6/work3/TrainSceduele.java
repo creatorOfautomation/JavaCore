@@ -32,20 +32,24 @@ public class TrainSceduele {
         }
         int counter = 0;
         Train[] foundTrains = new Train[count];
-
         for (int i = 0; i < count; i++) {
             if (destStation.equalsIgnoreCase(trains[i].getStationDispatch())) {
                 for (DaysOfWeek d : trains[i].getDaysOfWeek()) {
                     if (daysOfWeek.equals(d)) {
-                        counter++;
                         foundTrains[counter] = trains[i];
-                       // System.out.println(trains[i].toString());
+                        counter++;
                     }
                 }
-            } else return;
+            }
         }
+        Train[] trainsToprint = Arrays.copyOf(foundTrains, counter);
 
-
+        if (trainsToprint.length > 0) {
+            System.out.println("We have found trains for you");
+            for (int i = 0; i < trainsToprint.length; i++) {
+                System.out.println(trainsToprint[i].toString());
+            }
+        } else System.out.println("there are no one train by your query");
     }
 
     public void printTrains() {

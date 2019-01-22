@@ -28,7 +28,7 @@ public class Runner {
             for (int i = 0; i < daysOfWeekStr.length; i++) {
                 daysOfWeek[i] = DaysOfWeek.valueOf(daysOfWeekStr[i].toUpperCase());
             }
-            trainSceduele.addTrain(trainSceduele.createTrain(srvStat, timeDest, timeArr, dstStat, daysOfWeek));
+            trainSceduele.addTrain(trainSceduele.createTrain(dstStat,timeDest, timeArr, srvStat, daysOfWeek));
             System.out.println("Do you want to add one more train? [Y] or [No] -->");
             String want = scanner.next();
             if (!want.equalsIgnoreCase("Y"))
@@ -42,7 +42,7 @@ public class Runner {
 
         if (wantFind) {
             System.out.println("Enter destination station --> ");
-            String dstf = scanner.next();
+            String dstf = scanner.next().toUpperCase();
             System.out.println("Enter day of week --> ");
             DaysOfWeek dowf = DaysOfWeek.valueOf(scanner.next().toUpperCase());
             trainSceduele.searchTrains(dowf,dstf);
