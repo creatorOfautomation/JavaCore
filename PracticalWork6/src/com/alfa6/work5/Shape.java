@@ -25,8 +25,7 @@ public abstract class Shape implements Drawable, Comparable {
             case "CIRCLE":
                 return Circle.parseCircle(string);
             case "TRIANGLE":
-
-                return Triangle.parseShape(string);
+                return Triangle.parseTriangle(string);
             default:
                 System.out.println("ERROR trying to parse string. Check figure");
                 return null;
