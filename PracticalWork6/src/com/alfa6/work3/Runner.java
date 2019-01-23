@@ -10,9 +10,9 @@ public class Runner {
 
         TrainSceduele trainSceduele = new TrainSceduele(2);
         Scanner scanner = new Scanner(System.in);
-        boolean wantCountinue = true;
+        boolean wantContinue = true;
         System.out.println("U a here to create one train!!");
-        while (wantCountinue) {
+        while (wantContinue) {
             System.out.println("Enter source station -->");
             String srvStat = scanner.next();
             System.out.println("Enter dest station -->");
@@ -32,7 +32,7 @@ public class Runner {
             System.out.println("Do you want to add one more train? [Y] or [No] -->");
             String want = scanner.next();
             if (!want.equalsIgnoreCase("Y"))
-                wantCountinue = false;
+                wantContinue = false;
         }
         System.out.println("U created next trains: ");
         trainSceduele.printTrains();
