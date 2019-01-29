@@ -14,5 +14,9 @@ public class Runner {
         book.addPhoneNumber("ame2", "457");
 
         book.printPhoneBook();
+        //2
+        System.out.println("__________________________________");
+        MyPhoneBook.PhoneRecord[] records = book.sortByName();
+        book.printPhoneBook(records);
     }
 }

@@ -1,5 +1,8 @@
 package com.alfa8.work1;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 public class MyPhoneBook {
 
     static class PhoneRecord{
@@ -53,5 +56,25 @@ public class MyPhoneBook {
         for (int i = 0; i < counter; i++) {
             System.out.println(phoneRecords[i].toString());
         }
+    }
+
+    public void printPhoneBook(PhoneRecord[] record) {
+
+        for (int i = 0; i < counter; i++) {
+            System.out.println(record[i].toString());
+        }
+    }
+
+    public PhoneRecord[] sortByName() {
+        PhoneRecord[] copyPhones = Arrays.copyOf(phoneRecords, counter);
+        Arrays.sort(copyPhones, new Comparator() {
+            @Override
+            public int compare(Object o1, Object o2) {
+                String name1 = ((PhoneRecord) o1).getName();
+                String name2 = ((PhoneRecord) o2).getName();
+                return name1.compareTo(name2);
+            }
+        });
+        return copyPhones;
     }
 }
