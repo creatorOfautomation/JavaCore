@@ -4,19 +4,10 @@ public class Runner {
 
     public void run() {
 
-        MyPhoneBook book = new MyPhoneBook();
+        MyPhone book = new MyPhone();
 
-        book.addPhoneNumber("Name", "123");
-        book.addPhoneNumber("name1", "456");
-        book.addPhoneNumber("name1", "45");
-        book.addPhoneNumber("ame1", "4569");
-        book.addPhoneNumber("me1", "458");
-        book.addPhoneNumber("ame2", "457");
+        book.swichOn();
+        book.call(2);
 
-        book.printPhoneBook();
-        //2
-        System.out.println("__________________________________");
-        MyPhoneBook.PhoneRecord[] records = book.sortByName();
-        book.printPhoneBook(records);
     }
 }
