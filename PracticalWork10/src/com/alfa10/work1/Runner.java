@@ -25,22 +25,19 @@ public class Runner {
         for (String s : linkedList) {
             System.out.println(s);
         }
-        System.out.println("===========");
+        System.out.println("======================SORTED LIST======================");
         ListIterator<String> arrListIterator = arrayList.listIterator(10);
-        ListIterator<String> linkedlistIterator = linkedList.listIterator(1);
-
+        ListIterator<String> linkedlistIterator = linkedList.listIterator(0);
         while (arrListIterator.hasPrevious()) {
-//            System.out.println("previous index " +arrListIterator.previousIndex());
-//            System.out.println("previous  " +arrListIterator.previous());
-            if (!(arrListIterator.previousIndex() % 2 == 0))
-                linkedlistIterator.add(arrListIterator.previous());
+            if (arrListIterator.previousIndex() % 2 != 0) {
+                linkedlistIterator.next();
+                linkedlistIterator.set(arrListIterator.previous());
+            }
+            linkedlistIterator.next();
             arrListIterator.previous();
         }
         for (String s : linkedList) {
             System.out.println(s);
         }
-//        while (linkedlistIterator.hasNext()) {
-//            System.out.println(linkedlistIterator.next());
-//        }
     }
 }
