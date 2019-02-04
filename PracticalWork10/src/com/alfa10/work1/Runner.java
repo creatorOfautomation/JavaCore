@@ -27,13 +27,13 @@ public class Runner {
         }
         System.out.println("======================SORTED LIST======================");
         ListIterator<String> arrListIterator = arrayList.listIterator(10);
-        ListIterator<String> linkedlistIterator = linkedList.listIterator(0);
+        ListIterator<String> linkedListIterator = linkedList.listIterator(0);
         while (arrListIterator.hasPrevious()) {
             if (arrListIterator.previousIndex() % 2 != 0) {
-                linkedlistIterator.next();
-                linkedlistIterator.set(arrListIterator.previous());
+                linkedListIterator.next();
+                linkedListIterator.set(arrListIterator.previous());
             }
-            linkedlistIterator.next();
+            linkedListIterator.next();
             arrListIterator.previous();
         }
         for (String s : linkedList) {

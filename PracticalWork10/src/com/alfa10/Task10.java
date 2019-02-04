@@ -1,6 +1,6 @@
 package com.alfa10;
 
-import com.alfa10.work1.Runner;
+import com.alfa10.work2.Runner;
 
 public class Task10 {
 
