@@ -10,7 +10,7 @@ public class Runner {
         translator.addWords("pen","ручка");
         translator.addWords("Pen4", "pen4");
 
-        String i_have_pen = translator.translate("I have pen");
+        String i_have_pen = translator.translate("I have pen ");
 
         System.out.println(i_have_pen);
     }

@@ -20,14 +20,20 @@ public class MyTranslator {
 
     public String translate(String phrase) {
 
-     //   Iterator<Map.Entry<String, String>> iterator = dictionary.entrySet().iterator();
-
         String transPhrases = "";
+        String noTrans = "";
         String[] words = phrase.split(" ");
         for (String s : words) {
             if (dictionary.containsKey(s)) {
                 transPhrases += dictionary.get(s) + " ";
+            } else {
+                transPhrases += s;
+                noTrans += s + ", ";
             }
+        }
+        if (noTrans.length() > 0) {
+            System.out.println(String.format("U hab to add translation for next words %s", noTrans));
+
         }
         return transPhrases;
     }
