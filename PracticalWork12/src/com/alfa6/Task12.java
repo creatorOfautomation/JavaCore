@@ -1,11 +1,11 @@
-package com.alfa10;
+package com.alfa6;
 
-import com.alfa10.work2.Runner;
+import com.alfa6.work1.Runner;
 
-public class Task10 {
+public class Task12 {
+
 
     public static void main(String[] args) {
         new Runner().run();
-
     }
 }
