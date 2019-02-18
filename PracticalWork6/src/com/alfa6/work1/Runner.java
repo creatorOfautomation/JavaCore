@@ -33,4 +33,9 @@ public class Runner {
         DaysOfWeek week = DaysOfWeek.valueOf(day.toUpperCase());
         System.out.println("Next day of week " + week.nextDay());
     }
+
+
+    public static void main(String[] args) {
+        System.out.println(DaysOfWeek.FRIDAY.ordinal());
+    }
 }

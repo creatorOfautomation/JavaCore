@@ -3,6 +3,7 @@ package core;
 
 import core.work1.Task1;
 
+import java.io.FileNotFoundException;
 import java.util.Arrays;
 
 public class NotAWork {
@@ -10,11 +11,17 @@ public class NotAWork {
 
     public static void main(String[] args) {
 
-        Task1 stud1 = null;
-        Task1 stud2 = (Task1) null;
-        System.out.println(stud1);
-        System.out.println(stud2);
-        System.out.println(stud1!=stud2);
+        int a = 1;
+        int b = 0;
 
+        try {
+
+            System.out.println(a / b);
+        }catch (NullPointerException e) {
+            System.out.println("Block catch");
+        }finally {
+            System.out.println("Block finnaly");
+            System.out.println();
+        }
     }
 }

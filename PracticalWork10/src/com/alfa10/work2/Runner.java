@@ -23,7 +23,5 @@ public class Runner {
 
         Set<Integer> integers = generator.generatorSet();
         System.out.println(integers);
-
-        Collections.unmodifiableCollection()
-    }
+        }
 }
