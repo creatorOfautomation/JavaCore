@@ -76,7 +76,7 @@ public class Runner {
         }
     }
 
-    public void updateList(List<String> list, MyConverter<String> converter) {
+    public void updateList(List<String> list, MyConverter converter) {
 
         ListIterator<String> iterator = list.listIterator();
         while (iterator.hasNext())
@@ -95,25 +95,5 @@ public class Runner {
             list.add(stringBuilder.toString());
         }
         return list;
-    }
-
-    public static void main(String[] args) {
-        List<String> list = new ArrayList<>();
-
-        list.add("1");
-        list.add("2");
-        list.add("3");
-
-        for (String s :
-                list) {
-
-        }
-    }
-
-    private void test(List<String> strings) {
-        for (String s :
-                strings) {
-            s = s + "s";
-        }
     }
 }
