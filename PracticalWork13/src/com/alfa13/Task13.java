@@ -1,6 +1,6 @@
 package com.alfa13;
 
-import com.alfa13.work1.Runner;
+import com.alfa13.work2.Runner;
 
 public class Task13 {
 
